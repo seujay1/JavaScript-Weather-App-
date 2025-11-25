@@ -36,6 +36,8 @@ OpenWeatherMap API	Used for real-time weather data
 Git & GitHub	Version control and hosting
 VS Code	Development environment
 Live Server Extension	For instant preview during development
+
+
 📂 Project Structure
 Weather-App/
  ├── index.html
