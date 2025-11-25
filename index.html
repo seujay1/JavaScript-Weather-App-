@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌦 Weather Dashboard</h1>
+
+  
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+   
+    <div class="buttons">
+      <button class="gps-btn" onclick="getLocationWeather()">📍 Current Location</button>
+      <button class="unit-btn" onclick="toggleUnit()">°C / °F</button>
+      <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
+
+   
+    <p id="loading" class="loading hidden">Loading...</p>
+
+    
+    <p id="errorMessage" class="error hidden"></p>
+
+    
+    <div id="weatherResult" class="weather-card hidden fade-in">
+      <h2 id="cityName"></h2>
+      <div class="weather-main">
+        <img id="weatherIcon" />
+        <h3 id="temperature"></h3>
+      </div>
+      <p id="description"></p>
+      <div class="weather-details">
+        <p id="humidity"></p>
+        <p id="wind"></p>
+      </div>
+    </div>
+
+   
+    <h2 id="forecastTitle" class="hidden">5-Day Forecast</h2>
+    <div id="forecastBox" class="forecast hidden"></div>
+
+   
+    <h2 id="hourlyTitle" class="hidden">Next Hours</h2>
+    <div id="hourlyBox" class="forecast hidden"></div>
+
+    
+    <h3>Recent Searches</h3>
+    <ul id="historyList" class="history"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
